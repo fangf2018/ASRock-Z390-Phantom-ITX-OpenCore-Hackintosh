@@ -14,7 +14,7 @@ Wireless network card：BCM943602CS
 
 ## Drive situation
 
-* System stability：No system crashes，System has been update10.15.2 Beta(19B77a)
+* System stability：No system crashes，System has been update10.15.1 Beta2(19B77a)
 
 * Graphics：rx480 driver is normal，UHD630 working frequency 1.2Ghz
 * Sound card：Normal drive
