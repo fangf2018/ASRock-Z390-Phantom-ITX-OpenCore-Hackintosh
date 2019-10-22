@@ -12,7 +12,7 @@
 				<key>Comment</key>
 				<string>AirportBrcmFixup</string>
 				<key>Enabled</key>
-				<false/>
+				<true/>
 				<key>ExecutablePath</key>
 				<string>Contents/MacOS/AirportBrcmFixup</string>
 				<key>MatchKernel</key>
@@ -26,7 +26,7 @@
 				<key>Comment</key>
 				<string>BrcmBluetooth</string>
 				<key>Enabled</key>
-				<false/>
+				<true/>
 				<key>ExecutablePath</key>
 				<string></string>
 				<key>MatchKernel</key>
@@ -40,7 +40,7 @@
 				<key>Comment</key>
 				<string>BrcmBluetooth</string>
 				<key>Enabled</key>
-				<false/>
+				<true/>
 				<key>ExecutablePath</key>
 				<string>Contents/MacOS/BrcmFirmwareData</string>
 				<key>MatchKernel</key>
@@ -54,7 +54,7 @@
 				<key>Comment</key>
 				<string>BrcmBluetooth</string>
 				<key>Enabled</key>
-				<false/>
+				<true/>
 				<key>ExecutablePath</key>
 				<string>Contents/MacOS/BrcmPatchRAM3</string>
 				<key>MatchKernel</key>
@@ -68,7 +68,7 @@
 				<key>Comment</key>
 				<string>BrcmBluetooth</string>
 				<key>Enabled</key>
-				<false/>
+				<true/>
 				<key>ExecutablePath</key>
 				<string>Contents/MacOS/BT4LEContiunityFixup</string>
 				<key>MatchKernel</key>
