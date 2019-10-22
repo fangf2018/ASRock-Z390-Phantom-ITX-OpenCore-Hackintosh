@@ -164,7 +164,7 @@
 				<key>Count</key>
 				<integer>0</integer>
 				<key>Enabled</key>
-				<true/>
+				<false/>
 				<key>Find</key>
 				<data>
 				Cm0KBA==
@@ -257,50 +257,14 @@
 	<dict>
 		<key>Add</key>
 		<dict>
-			<key>PciRoot(0x0)/Pci(0x12,0x0)</key>
+			<key>PciRoot(0x0)/Pci(0x1,0x0)/Pci(0x0,0x1)</key>
 			<dict>
 				<key>AAPL,slot-name</key>
-				<string>Internal@0,18,0</string>
+				<string>Internal@0,1,0/0,1</string>
 				<key>device_type</key>
-				<string>Signal processing controller</string>
+				<string>Audio device</string>
 				<key>model</key>
-				<string>Cannon Lake PCH Thermal Controller</string>
-			</dict>
-			<key>PciRoot(0x0)/Pci(0x14,0x0)</key>
-			<dict>
-				<key>AAPL,slot-name</key>
-				<string>Internal@0,20,0</string>
-				<key>device_type</key>
-				<string>USB controller</string>
-				<key>model</key>
-				<string>Cannon Lake PCH USB 3.1 xHCI Host Controller</string>
-			</dict>
-			<key>PciRoot(0x0)/Pci(0x14,0x2)</key>
-			<dict>
-				<key>AAPL,slot-name</key>
-				<string>Internal@0,20,2</string>
-				<key>device_type</key>
-				<string>RAM memory</string>
-				<key>model</key>
-				<string>Cannon Lake PCH Shared SRAM</string>
-			</dict>
-			<key>PciRoot(0x0)/Pci(0x16,0x0)</key>
-			<dict>
-				<key>AAPL,slot-name</key>
-				<string>Internal@0,22,0</string>
-				<key>device_type</key>
-				<string>Communication controller</string>
-				<key>model</key>
-				<string>Cannon Lake PCH HECI Controller</string>
-			</dict>
-			<key>PciRoot(0x0)/Pci(0x17,0x0)</key>
-			<dict>
-				<key>AAPL,slot-name</key>
-				<string>Internal@0,23,0</string>
-				<key>device_type</key>
-				<string>SATA controller</string>
-				<key>model</key>
-				<string>Cannon Lake PCH SATA AHCI Controller</string>
+				<string>AMD Radeon RX 480</string>
 			</dict>
 			<key>PciRoot(0x0)/Pci(0x1f,0x3)</key>
 			<dict>
@@ -316,33 +280,6 @@
 				</data>
 				<key>model</key>
 				<string>Cannon Lake PCH cAVS</string>
-			</dict>
-			<key>PciRoot(0x0)/Pci(0x1f,0x4)</key>
-			<dict>
-				<key>AAPL,slot-name</key>
-				<string>Internal@0,31,4</string>
-				<key>device_type</key>
-				<string>SMBus</string>
-				<key>model</key>
-				<string>Cannon Lake PCH SMBus Controller</string>
-			</dict>
-			<key>PciRoot(0x0)/Pci(0x1f,0x5)</key>
-			<dict>
-				<key>AAPL,slot-name</key>
-				<string>Internal@0,31,5</string>
-				<key>device_type</key>
-				<string>Serial bus controller</string>
-				<key>model</key>
-				<string>Cannon Lake PCH SPI Controller</string>
-			</dict>
-			<key>PciRoot(0x0)/Pci(0x1f,0x6)</key>
-			<dict>
-				<key>AAPL,slot-name</key>
-				<string>Internal@0,31,6</string>
-				<key>device_type</key>
-				<string>Ethernet controller</string>
-				<key>model</key>
-				<string>Ethernet Connection (7) I219-V</string>
 			</dict>
 			<key>PciRoot(0x0)/Pci(0x2,0x0)</key>
 			<dict>
@@ -645,7 +582,7 @@
 				<key>Comment</key>
 				<string>BootCamp</string>
 				<key>Enabled</key>
-				<true/>
+				<false/>
 				<key>Name</key>
 				<string>BootCamp</string>
 				<key>Path</key>
@@ -709,7 +646,7 @@
 			<key>7C436110-AB2A-4BBB-A880-FE41995C9F82</key>
 			<dict>
 				<key>boot-args</key>
-				<string>dart=0 debug=0x100 keepsyms=1 darkwake=0 -v agdpmod=pikera</string>
+				<string>-v dart=0 debug=0x100 keepsyms=1 darkwake=0 agdpmod=pikera </string>
 				<key>csr-active-config</key>
 				<data>
 				ZwAAAA==
@@ -807,8 +744,8 @@
 		<array>
 			<string>ApfsDriverLoader.efi</string>
 			<string>FwRuntimeServices.efi</string>
-			<string>UsbKbDxe.efi</string>
 			<string>HFSPlus.efi</string>
+			<string>UsbKbDxe.efi</string>
 			<string>VirtualSmc.efi</string>
 		</array>
 		<key>Input</key>
