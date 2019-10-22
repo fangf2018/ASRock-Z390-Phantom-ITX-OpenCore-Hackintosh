@@ -49,6 +49,14 @@ Wireless network card：BCM943602CS
 
 # Update log
 
+### 2019-10-18
+
+* Update OpenCore and kext
+
+* Add BRCM network card driver
+
+![](http://github.fangf.cc/mweb/15717383021286.png)
+
 ### 2019-10-17
 
 * Re-impersonating the EC, the previous method has an error
