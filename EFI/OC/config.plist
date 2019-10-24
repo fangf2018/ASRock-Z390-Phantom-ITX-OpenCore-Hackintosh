@@ -8,14 +8,6 @@
 		<array>
 			<dict>
 				<key>Comment</key>
-				<string>强制启用RTC</string>
-				<key>Enabled</key>
-				<true/>
-				<key>Path</key>
-				<string>SSDT-AWAC.aml</string>
-			</dict>
-			<dict>
-				<key>Comment</key>
 				<string>仿冒EC控制器，加载USB电源管理</string>
 				<key>Enabled</key>
 				<true/>
@@ -26,7 +18,7 @@
 				<key>Comment</key>
 				<string>睡眠唤醒补丁，需配合GPRW to XPRW重命名，开启后usb设备不能唤醒。（如果你想让usb可以唤醒，请关闭它，并测试睡眠唤醒是否正常）</string>
 				<key>Enabled</key>
-				<true/>
+				<false/>
 				<key>Path</key>
 				<string>SSDT-GPRW.aml</string>
 			</dict>
@@ -37,6 +29,14 @@
 				<true/>
 				<key>Path</key>
 				<string>SSDT-PLUG.aml</string>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string></string>
+				<key>Enabled</key>
+				<true/>
+				<key>Path</key>
+				<string>SSDT-RTC0.aml</string>
 			</dict>
 			<dict>
 				<key>Comment</key>
@@ -90,7 +90,7 @@
 				<key>Count</key>
 				<integer>1</integer>
 				<key>Enabled</key>
-				<true/>
+				<false/>
 				<key>Find</key>
 				<data>
 				R1BSVwI=
@@ -125,7 +125,7 @@
 				<key>Count</key>
 				<integer>0</integer>
 				<key>Enabled</key>
-				<true/>
+				<false/>
 				<key>Find</key>
 				<data>
 				Cm0KBA==
@@ -428,7 +428,7 @@
 			<key>7C436110-AB2A-4BBB-A880-FE41995C9F82</key>
 			<dict>
 				<key>boot-args</key>
-				<string>-v dart=0 debug=0x100 keepsyms=1 darkwake=0 agdpmod=pikera </string>
+				<string>-v dart=0 debug=0x100 keepsyms=1 agdpmod=pikera darkwake=10</string>
 				<key>csr-active-config</key>
 				<data>
 				ZwAAAA==
@@ -496,19 +496,19 @@
 		<key>Generic</key>
 		<dict>
 			<key>MLB</key>
-			<string>C029347014NLNV9JA</string>
+			<string>C029347014NLNV9J1</string>
 			<key>ROM</key>
 			<data>
-			T0PAg4UJ
+			T0PAg4UB
 			</data>
 			<key>SpoofVendor</key>
 			<true/>
 			<key>SystemProductName</key>
 			<string>iMac19,1</string>
 			<key>SystemSerialNumber</key>
-			<string>C02Z800QJV3Q</string>
+			<string>C02Z800QJV31</string>
 			<key>SystemUUID</key>
-			<string>2F52B8E1-B40A-42A9-A793-A603FA838509</string>
+			<string>2F52B8E1-B40A-42A9-A793-A603FA838501</string>
 		</dict>
 		<key>UpdateDataHub</key>
 		<true/>
@@ -562,6 +562,8 @@
 			<true/>
 			<key>ProvideConsoleGop</key>
 			<true/>
+			<key>ReconnectOnResChange</key>
+			<false/>
 			<key>RequestBootVarRouting</key>
 			<true/>
 		</dict>
