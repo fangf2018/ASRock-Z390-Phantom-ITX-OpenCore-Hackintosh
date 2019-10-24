@@ -8,14 +8,6 @@
 		<array>
 			<dict>
 				<key>Comment</key>
-				<string>仿冒EC控制器，加载USB电源管理</string>
-				<key>Enabled</key>
-				<true/>
-				<key>Path</key>
-				<string>SSDT-EC.aml</string>
-			</dict>
-			<dict>
-				<key>Comment</key>
 				<string>加载X86，原生电源管理</string>
 				<key>Enabled</key>
 				<true/>
@@ -218,25 +210,9 @@
 			</dict>
 			<dict>
 				<key>BundlePath</key>
-				<string>USBPortsALL.kext</string>
-				<key>Comment</key>
-				<string>@fangf2018 定制usb驱动全端口，华擎Z390Phantom必备</string>
-				<key>Enabled</key>
-				<false/>
-				<key>ExecutablePath</key>
-				<string></string>
-				<key>MaxKernel</key>
-				<string></string>
-				<key>MinKernel</key>
-				<string></string>
-				<key>PlistPath</key>
-				<string>Contents/Info.plist</string>
-			</dict>
-			<dict>
-				<key>BundlePath</key>
 				<string>USBPorts.kext</string>
 				<key>Comment</key>
-				<string>@fangf2018 定制usb驱动不含前面版，华擎Z390Phantom必备</string>
+				<string>@fangf2018 华擎Z390Phantom必备</string>
 				<key>Enabled</key>
 				<true/>
 				<key>ExecutablePath</key>
@@ -413,7 +389,6 @@
 		<true/>
 		<key>Drivers</key>
 		<array>
-			<string>apfs.efi</string>
 			<string>ApfsDriverLoader.efi</string>
 			<string>FwRuntimeServices.efi</string>
 			<string>HFSPlus.efi</string>
