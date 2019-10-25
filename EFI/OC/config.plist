@@ -270,6 +270,8 @@
 		<dict>
 			<key>AllowNvramReset</key>
 			<true/>
+			<key>ExposeSensitiveData</key>
+			<integer>3</integer>
 			<key>RequireSignature</key>
 			<false/>
 			<key>RequireVault</key>
