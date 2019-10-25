@@ -8,11 +8,35 @@
 		<array>
 			<dict>
 				<key>Comment</key>
-				<string>加载X86，原生电源管理</string>
+				<string>仿冒EC</string>
+				<key>Enabled</key>
+				<true/>
+				<key>Path</key>
+				<string>SSDT-EC.aml</string>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>USB电源控制</string>
+				<key>Enabled</key>
+				<true/>
+				<key>Path</key>
+				<string>SSDT-USBX.aml</string>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>CPU原生电源管理</string>
 				<key>Enabled</key>
 				<true/>
 				<key>Path</key>
 				<string>SSDT-PLUG.aml</string>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>加载断电重启选项</string>
+				<key>Enabled</key>
+				<true/>
+				<key>Path</key>
+				<string>SSDT-PPMC.aml</string>
 			</dict>
 			<dict>
 				<key>Comment</key>
@@ -21,14 +45,6 @@
 				<true/>
 				<key>Path</key>
 				<string>SSDT-RTC0.aml</string>
-			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>加载‘节能’中‘断电后自动启动选项’</string>
-				<key>Enabled</key>
-				<true/>
-				<key>Path</key>
-				<string>SSDT-PPMC.aml</string>
 			</dict>
 		</array>
 	</dict>
@@ -164,7 +180,7 @@
 				<key>BundlePath</key>
 				<string>WhateverGreen.kext</string>
 				<key>Comment</key>
-				<string>@bugprogrammer的魔改版显卡驱动，提升核显加速效率 v1.3.2</string>
+				<string>@bugprogrammer的魔改版显卡驱动，提升核显加速效率 v1.3.4</string>
 				<key>Enabled</key>
 				<true/>
 				<key>ExecutablePath</key>
