@@ -341,7 +341,7 @@
 			<key>7C436110-AB2A-4BBB-A880-FE41995C9F82</key>
 			<dict>
 				<key>boot-args</key>
-				<string>-v dart=0 alcid=1 darkwake=0</string>
+				<string>-v dart=0 alcid=1 darkwake=0 slide=1</string>
 				<key>csr-active-config</key>
 				<data>
 				ZwAAAA==
