@@ -318,7 +318,7 @@
 			<key>AllowNvramReset</key>
 			<true/>
 			<key>ExposeSensitiveData</key>
-			<integer>3</integer>
+			<integer>6</integer>
 			<key>RequireSignature</key>
 			<false/>
 			<key>RequireVault</key>
@@ -341,7 +341,7 @@
 			<key>7C436110-AB2A-4BBB-A880-FE41995C9F82</key>
 			<dict>
 				<key>boot-args</key>
-				<string>-v dart=0 alcid=1 darkwake=0 slide=1</string>
+				<string>-v dart=0 alcid=1 darkwake=8 slide=1</string>
 				<key>csr-active-config</key>
 				<data>
 				ZwAAAA==
@@ -409,19 +409,19 @@
 		<key>Generic</key>
 		<dict>
 			<key>MLB</key>
-			<string>C02913902GULNV91</string>
+			<string>C02913902GULNV911</string>
 			<key>ROM</key>
 			<data>
-			C+0xf3nH
+			vtMX95xx
 			</data>
 			<key>SpoofVendor</key>
 			<true/>
 			<key>SystemProductName</key>
 			<string>iMac19,1</string>
 			<key>SystemSerialNumber</key>
-			<string>C02YH5Y2JV3</string>
+			<string>C02YH5Y2JV31</string>
 			<key>SystemUUID</key>
-			<string>EF2FE448-AB44-4F9E-B60E-F4BBF8F79C7</string>
+			<string>EF2FE448-AB44-4F9E-B60E-F4BBF8F79C71</string>
 		</dict>
 		<key>UpdateDataHub</key>
 		<true/>
