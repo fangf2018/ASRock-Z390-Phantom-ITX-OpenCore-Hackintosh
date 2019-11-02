@@ -32,14 +32,6 @@
 			</dict>
 			<dict>
 				<key>Comment</key>
-				<string>加载断电重启选项</string>
-				<key>Enabled</key>
-				<true/>
-				<key>Path</key>
-				<string>SSDT-PPMC.aml</string>
-			</dict>
-			<dict>
-				<key>Comment</key>
 				<string></string>
 				<key>Enabled</key>
 				<true/>
@@ -52,7 +44,7 @@
 				<key>Enabled</key>
 				<true/>
 				<key>Path</key>
-				<string>SSDT-SBUS.aml</string>
+				<string>SSDT-SBUS-MCHC.aml</string>
 			</dict>
 		</array>
 		<key>Patch</key>
@@ -325,7 +317,7 @@
 			<key>RequireVault</key>
 			<false/>
 			<key>ScanPolicy</key>
-			<integer>983299</integer>
+			<integer>0</integer>
 		</dict>
 	</dict>
 	<key>NVRAM</key>
@@ -408,19 +400,19 @@
 		<key>Generic</key>
 		<dict>
 			<key>MLB</key>
-			<string>C02952306J9LNV9A1</string>
+			<string>C02952102QXLNV9A8</string>
 			<key>ROM</key>
 			<data>
-			o57tLO0R
+			RwT7ERm+
 			</data>
 			<key>SpoofVendor</key>
 			<true/>
 			<key>SystemProductName</key>
 			<string>iMac19,1</string>
 			<key>SystemSerialNumber</key>
-			<string>C02ZWYYSJV31</string>
+			<string>C02ZWSY5JV3Q</string>
 			<key>SystemUUID</key>
-			<string>A5D20650-02C0-4448-8F5D-1D595E2CED11</string>
+			<string>77738956-7F1B-4ED4-88B8-B230651119BE</string>
 		</dict>
 		<key>UpdateDataHub</key>
 		<true/>
