@@ -19,9 +19,9 @@ Wireless network card：BCM943602CS
 * Graphics：rx480 driver is normal，UHD630 working frequency 1.2Ghz
 * Sound card：Normal drive
 * wifi、Bluetooth、Handoff、Sidecar Normal use
-* Sleep &wake：Manual click sleep
+* Sleep &wake：work well
 
-![QQ20191013-105901](http://github.fangf.cc/mweb/QQ20191013-105901.png)
+
 * location：work well
 * nvram：The nvram.plst file can be generated normally.
     
@@ -48,6 +48,11 @@ Wireless network card：BCM943602CS
 
 
 # Update log
+
+### 2019-11-07
+
+* update OpenCore、Kext
+* delete ssdt-PM、usbport
 
 ### 2019-10-18
 
