@@ -38,14 +38,6 @@
 				<key>Path</key>
 				<string>SSDT-GPRW.aml</string>
 			</dict>
-			<dict>
-				<key>Comment</key>
-				<string></string>
-				<key>Enabled</key>
-				<true/>
-				<key>Path</key>
-				<string>SSDT-PM.aml</string>
-			</dict>
 		</array>
 		<key>Patch</key>
 		<array>
