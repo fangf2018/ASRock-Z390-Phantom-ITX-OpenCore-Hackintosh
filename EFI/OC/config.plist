@@ -384,8 +384,8 @@
 				<string>efi-boot-device-data</string>
 				<string>flagstate</string>
 				<string>fmm-computer-name</string>
-				<string>fmm-mobleme-token-FMM</string>
-				<string>fmm-mobleme-token-FMM-bridgeHasAccount</string>
+				<string>fmm-mobileme-token-FMM</string>
+				<string>fmm-mobileme-token-FMM-BridgeHasAccount</string>
 				<string>prev-lang:kbd</string>
 				<string>security-mode</string>
 				<string>specialbootdevice</string>
@@ -437,6 +437,7 @@
 		<array>
 			<string>ApfsDriverLoader.efi</string>
 			<string>FwRuntimeServices.efi</string>
+			<string>#VariableRuntimeDxe.efi</string>
 			<string>UsbKbDxe.efi</string>
 			<string>HFSPlus.efi</string>
 			<string>VirtualSmc.efi</string>
