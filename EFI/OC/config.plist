@@ -125,7 +125,7 @@
 	<dict>
 		<key>Add</key>
 		<dict>
-			<key>PciRoot(0x0)/Pci(0x1,0x0)/Pci(0x0,0x1)</key>
+			<key>PciRoot(0x0)/Pci(0x1,0x0)/Pci(0x0,0x0)</key>
 			<dict>
 				<key>model</key>
 				<string>AMD Radeon RX 480</string>
@@ -163,7 +163,7 @@
 				<key>BundlePath</key>
 				<string>Lilu.kext</string>
 				<key>Comment</key>
-				<string>SDK &amp; Library v1.3.8</string>
+				<string>SDK &amp; Library v1.4.1</string>
 				<key>Enabled</key>
 				<true/>
 				<key>ExecutablePath</key>
@@ -179,7 +179,7 @@
 				<key>BundlePath</key>
 				<string>VirtualSMC.kext</string>
 				<key>Comment</key>
-				<string>@Acidanthera的SMC v1.0.8</string>
+				<string>@Acidanthera的SMC v1.0.9</string>
 				<key>Enabled</key>
 				<true/>
 				<key>ExecutablePath</key>
@@ -227,7 +227,7 @@
 				<key>BundlePath</key>
 				<string>WhateverGreen.kext</string>
 				<key>Comment</key>
-				<string>@bugprogrammer的魔改版显卡驱动，提升核显加速效率 v1.3.4</string>
+				<string>@bugprogrammer的魔改版显卡驱动，提升核显加速效率 v1.3.6</string>
 				<key>Enabled</key>
 				<true/>
 				<key>ExecutablePath</key>
@@ -243,7 +243,7 @@
 				<key>BundlePath</key>
 				<string>AppleALC.kext</string>
 				<key>Comment</key>
-				<string>声卡驱动 v1.4.2</string>
+				<string>声卡驱动 v1.4.4</string>
 				<key>Enabled</key>
 				<true/>
 				<key>ExecutablePath</key>
@@ -341,7 +341,7 @@
 			<key>7C436110-AB2A-4BBB-A880-FE41995C9F82</key>
 			<dict>
 				<key>boot-args</key>
-				<string>-v dart=0 alcid=1 darkwake=0 slide=1</string>
+				<string>dart=0 alcid=1 darkwake=0 slide=1</string>
 				<key>csr-active-config</key>
 				<data>
 				ZwAAAA==
@@ -437,7 +437,6 @@
 		<array>
 			<string>ApfsDriverLoader.efi</string>
 			<string>FwRuntimeServices.efi</string>
-			<string>#VariableRuntimeDxe.efi</string>
 			<string>UsbKbDxe.efi</string>
 			<string>HFSPlus.efi</string>
 			<string>VirtualSmc.efi</string>
