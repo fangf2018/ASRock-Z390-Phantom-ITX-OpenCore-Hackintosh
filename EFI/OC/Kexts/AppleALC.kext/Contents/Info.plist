@@ -17,7 +17,7 @@
 	<key>CFBundlePackageType</key>
 	<string>KEXT</string>
 	<key>CFBundleShortVersionString</key>
-	<string>1.4.4</string>
+	<string>1.4.5</string>
 	<key>CFBundleSignature</key>
 	<string>????</string>
 	<key>CFBundleSupportedPlatforms</key>
@@ -25,7 +25,7 @@
 		<string>MacOSX</string>
 	</array>
 	<key>CFBundleVersion</key>
-	<string>1.4.4</string>
+	<string>1.4.5</string>
 	<key>DTCompiler</key>
 	<string>com.apple.compilers.llvm.clang.1_0</string>
 	<key>DTPlatformBuild</key>
@@ -3670,6 +3670,26 @@
 					<integer>1</integer>
 					<key>LayoutID</key>
 					<integer>18</integer>
+				</dict>
+				<dict>
+					<key>AFGLowPowerState</key>
+					<data>
+					AwAAAA==
+					</data>
+					<key>Codec</key>
+					<string>Andres ZeroCross - Lenovo All In One PC C440</string>
+					<key>CodecID</key>
+					<integer>283902578</integer>
+					<key>ConfigData</key>
+					<data>
+					AYccQAGHHZABhx6BAYcfAQEnHDABJx0BASce
+					oAEnH5ABpxwQAacdAQGnHhMBpx+ZAhccIAIX
+					HRACFx4hAhcfAQ==
+					</data>
+					<key>FuncGroup</key>
+					<integer>1</integer>
+					<key>LayoutID</key>
+					<integer>21</integer>
 				</dict>
 				<dict>
 					<key>AFGLowPowerState</key>
