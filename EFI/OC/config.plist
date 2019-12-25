@@ -30,6 +30,12 @@
 				<key>Path</key>
 				<string>SSDT-GPRW.aml</string>
 			</dict>
+			<dict>
+				<key>Enabled</key>
+				<false/>
+				<key>Path</key>
+				<string>SSDT-TB3.aml</string>
+			</dict>
 		</array>
 		<key>Patch</key>
 		<array>
@@ -117,6 +123,21 @@
 	<dict>
 		<key>Add</key>
 		<dict>
+			<key>PciRoot(0x0)/Pci(0x1,0x0)/Pci(0x0,0x0)/Pci(0x0,0x0)/Pci(0x0,0x0)</key>
+			<dict>
+				<key>#AAPL,slot-name</key>
+				<string>Internal@0,1,0/0,0/0,0/0,0</string>
+				<key>#device_type</key>
+				<string>VGA compatible controller</string>
+				<key>#hda-gfx</key>
+				<string>onboard-1</string>
+				<key>ATY,DeviceName</key>
+				<string>5500</string>
+				<key>ATY,FamilyName</key>
+				<string>Radeon Pro</string>
+				<key>model</key>
+				<string>Radeon Pro 5500</string>
+			</dict>
 			<key>PciRoot(0x0)/Pci(0x2,0x0)</key>
 			<dict>
 				<key>AAPL,ig-platform-id</key>
@@ -298,7 +319,7 @@
 			<key>7C436110-AB2A-4BBB-A880-FE41995C9F82</key>
 			<dict>
 				<key>boot-args</key>
-				<string>dart=0 alcid=1 darkwake=0 slide=1</string>
+				<string>dart=0 alcid=1 darkwake=0 slide=1 agdpmod=pikera</string>
 				<key>csr-active-config</key>
 				<data>
 				ZwAAAA==
