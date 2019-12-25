@@ -8,7 +8,7 @@ Motherboard：ASRockz390 phantom gaming-itx/ac
 
 cpu：i7 9700k
 
-Graphics：AMD Sapphire rx480
+Graphics：~~AMD Sapphire rx480~~ AMD RX5500 itx
 
 Wireless network card：BCM943602CS
 
