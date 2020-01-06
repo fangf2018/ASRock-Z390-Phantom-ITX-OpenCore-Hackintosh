@@ -23,23 +23,8 @@ Wireless network card：BCM943602CS
 
 
 * location：work well
-* nvram：
+* nvram：work well
 
- [View tutorial](https://fangf.cc/2019/11/15/oc-nvram/)
- 
-    ~~The nvram.plst file can be generated normally.~~
-    
-    ~~But the boot did not read, wait for the official fix.~~
-    
-    ~~The necessity of nvram：~~
-    
-    ~~Because the official description can achieve~~
-    
-    ~~the default boot of the startup disk like real-imac,~~ 
-    
-    ~~and ensure other functions are heavy.~~
-    
-    ~~Don't lose after starting, for example find for my device~~
       
 ![QQ20191013-112532](http://github.fangf.cc/mweb/QQ20191013-112532.png)
 * usb：No abnormality
