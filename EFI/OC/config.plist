@@ -615,7 +615,6 @@
 		<true/>
 		<key>Drivers</key>
 		<array>
-			<string>apfs.efi</string>
 			<string>ApfsDriverLoader.efi</string>
 			<string>FwRuntimeServices.efi</string>
 			<string>UsbKbDxe.efi</string>
