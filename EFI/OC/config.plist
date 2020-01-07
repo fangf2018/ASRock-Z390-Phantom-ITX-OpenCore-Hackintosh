@@ -165,6 +165,8 @@
 			<false/>
 			<key>ShrinkMemoryMap</key>
 			<false/>
+			<key>SignalAppleOS</key>
+			<false/>
 		</dict>
 	</dict>
 	<key>DeviceProperties</key>
@@ -488,6 +490,8 @@
 		<dict>
 			<key>AllowNvramReset</key>
 			<true/>
+			<key>AuthRestart</key>
+			<false/>
 			<key>ExposeSensitiveData</key>
 			<integer>3</integer>
 			<key>HaltLevel</key>
@@ -516,7 +520,7 @@
 			<key>7C436110-AB2A-4BBB-A880-FE41995C9F82</key>
 			<dict>
 				<key>boot-args</key>
-				<string>dart=0 alcid=1 darkwake=0 slide=1 agdpmod=pikera</string>
+				<string>dart=0 alcid=1 darkwake=0 slide=1 agdpmod=pikera -v</string>
 				<key>csr-active-config</key>
 				<data>
 				ZwAAAA==
@@ -584,10 +588,10 @@
 		<key>Generic</key>
 		<dict>
 			<key>MLB</key>
-			<string>C02906101CDLNV91F</string>
+			<string>C02909700J9LNV91M</string>
 			<key>ROM</key>
 			<data>
-			jX1toqF2
+			4/AkeeeL
 			</data>
 			<key>SpoofVendor</key>
 			<true/>
@@ -596,9 +600,9 @@
 			<key>SystemProductName</key>
 			<string>iMac19,1</string>
 			<key>SystemSerialNumber</key>
-			<string>C02Y73Z4JV3Q</string>
+			<string>C02YC0X9JV3Q</string>
 			<key>SystemUUID</key>
-			<string>30F362C8-17E2-4FD5-BD81-3613CCA2A176</string>
+			<string>1E9BA0B2-2658-402F-9CF1-A12D0A79E78B</string>
 		</dict>
 		<key>UpdateDataHub</key>
 		<true/>
@@ -619,7 +623,6 @@
 			<string>FwRuntimeServices.efi</string>
 			<string>UsbKbDxe.efi</string>
 			<string>HFSPlus.efi</string>
-			<string>VirtualSmc.efi</string>
 		</array>
 		<key>Input</key>
 		<dict>
@@ -650,6 +653,8 @@
 			<false/>
 			<key>AppleKeyMap</key>
 			<false/>
+			<key>AppleSmcIo</key>
+			<true/>
 			<key>AppleUserInterfaceTheme</key>
 			<false/>
 			<key>ConsoleControl</key>
@@ -661,6 +666,8 @@
 			<key>FirmwareVolume</key>
 			<false/>
 			<key>HashServices</key>
+			<false/>
+			<key>OSInfo</key>
 			<false/>
 			<key>UnicodeCollation</key>
 			<false/>
