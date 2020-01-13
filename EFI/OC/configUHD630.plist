@@ -10,6 +10,12 @@
 				<key>Enabled</key>
 				<true/>
 				<key>Path</key>
+				<string>SSDT-APMC.aml</string>
+			</dict>
+			<dict>
+				<key>Enabled</key>
+				<true/>
+				<key>Path</key>
 				<string>SSDT-AWAC.aml</string>
 			</dict>
 			<dict>
@@ -29,12 +35,6 @@
 				<true/>
 				<key>Path</key>
 				<string>SSDT-GPRW.aml</string>
-			</dict>
-			<dict>
-				<key>Enabled</key>
-				<false/>
-				<key>Path</key>
-				<string>SSDT-TB3.aml</string>
 			</dict>
 		</array>
 		<key>Patch</key>
@@ -104,6 +104,9 @@
 				<integer>0</integer>
 				<key>TableLength</key>
 				<integer>0</integer>
+				<key>TableSignature</key>
+				<data>
+				</data>
 			</dict>
 		</array>
 	</dict>
@@ -129,30 +132,16 @@
 				<data>
 				BwCbPg==
 				</data>
+				<key>AAPL,slot-name</key>
+				<string>Internal@0,2,0</string>
 				<key>device-id</key>
 				<data>
 				mz4AAA==
 				</data>
-				<key>enable-hdmi20</key>
-				<data>
-				AQAAAA==
-				</data>
-				<key>framebuffer-fbmem</key>
-				<data>
-				AACQAA==
-				</data>
-				<key>framebuffer-patch-enable</key>
-				<data>
-				AQAAAA==
-				</data>
-				<key>framebuffer-stolenmem</key>
-				<data>
-				AAAwAQ==
-				</data>
-				<key>framebuffer-unifiedmem</key>
-				<data>
-				AAAAgA==
-				</data>
+				<key>device_type</key>
+				<string>Display controller</string>
+				<key>hda-gfx</key>
+				<string>onboard-2</string>
 				<key>model</key>
 				<string>Intel UHD Graphics 630</string>
 			</dict>
@@ -224,6 +213,14 @@
 			</dict>
 			<dict>
 				<key>BundlePath</key>
+				<string>USBPorts.kext</string>
+				<key>Enabled</key>
+				<true/>
+				<key>PlistPath</key>
+				<string>Contents/Info.plist</string>
+			</dict>
+			<dict>
+				<key>BundlePath</key>
 				<string>IntelMausi.kext</string>
 				<key>Enabled</key>
 				<true/>
@@ -261,6 +258,42 @@
 				<string>Contents/Info.plist</string>
 			</dict>
 		</array>
+		<key>Patch</key>
+		<array>
+			<dict>
+				<key>Base</key>
+				<string>__ZN8AppleRTC18setupDateTimeAlarmEPK11RTCDateTime</string>
+				<key>Comment</key>
+				<string>Disable RTC wake scheduling</string>
+				<key>Count</key>
+				<integer>1</integer>
+				<key>Enabled</key>
+				<true/>
+				<key>Find</key>
+				<data>
+				</data>
+				<key>Identifier</key>
+				<string>com.apple.driver.AppleRTC</string>
+				<key>Limit</key>
+				<integer>0</integer>
+				<key>Mask</key>
+				<data>
+				</data>
+				<key>MaxKernel</key>
+				<string></string>
+				<key>MinKernel</key>
+				<string>19.0.0</string>
+				<key>Replace</key>
+				<data>
+				ww==
+				</data>
+				<key>ReplaceMask</key>
+				<data>
+				</data>
+				<key>Skip</key>
+				<integer>0</integer>
+			</dict>
+		</array>
 		<key>Quirks</key>
 		<dict>
 			<key>PanicNoKextDump</key>
@@ -277,8 +310,6 @@
 			<string>None</string>
 			<key>HideSelf</key>
 			<true/>
-			<key>PollAppleHotKeys</key>
-			<true/>
 			<key>ShowPicker</key>
 			<true/>
 			<key>Timeout</key>
@@ -289,6 +320,8 @@
 		<key>Security</key>
 		<dict>
 			<key>AllowNvramReset</key>
+			<true/>
+			<key>AllowSetDefault</key>
 			<true/>
 			<key>ExposeSensitiveData</key>
 			<integer>3</integer>
@@ -314,7 +347,7 @@
 			<key>7C436110-AB2A-4BBB-A880-FE41995C9F82</key>
 			<dict>
 				<key>boot-args</key>
-				<string>dart=0 alcid=1 darkwake=0 slide=1</string>
+				<string>dart=0 alcid=1 darkwake=0 slide=1 agdpmod=pikera -v</string>
 				<key>csr-active-config</key>
 				<data>
 				ZwAAAA==
@@ -341,6 +374,8 @@
 			</array>
 		</dict>
 		<key>LegacyEnable</key>
+		<true/>
+		<key>LegacyOverwrite</key>
 		<true/>
 		<key>LegacySchema</key>
 		<dict>
@@ -380,19 +415,19 @@
 		<key>Generic</key>
 		<dict>
 			<key>MLB</key>
-			<string>C02942104J9LNV9AD</string>
+			<string>C02934130GULNV91H</string>
 			<key>ROM</key>
 			<data>
-			JG4TBsLs
+			Nz4zdrpc
 			</data>
 			<key>SpoofVendor</key>
 			<true/>
 			<key>SystemProductName</key>
 			<string>iMac19,1</string>
 			<key>SystemSerialNumber</key>
-			<string>C02ZL0HZJV3Q</string>
+			<string>C02Z8UZ1JV3Q</string>
 			<key>SystemUUID</key>
-			<string>DE7B68B0-877C-4F58-A22B-D90F7B06C2EC</string>
+			<string>DEE15209-73DA-4905-8BEB-C5EB8C76BA5C</string>
 		</dict>
 		<key>UpdateDataHub</key>
 		<true/>
@@ -409,12 +444,12 @@
 		<true/>
 		<key>Drivers</key>
 		<array>
-			<string>apfs.efi</string>
 			<string>ApfsDriverLoader.efi</string>
+			<string>AppleUsbKbDxe.efi</string>
 			<string>FwRuntimeServices.efi</string>
-			<string>UsbKbDxe.efi</string>
 			<string>HFSPlus.efi</string>
-			<string>VirtualSmc.efi</string>
+			<string>NvmExpressDxe.efi</string>
+			<string>XhciDxe.efi</string>
 		</array>
 		<key>Input</key>
 		<dict>
@@ -426,17 +461,11 @@
 			<true/>
 			<key>KeySupportMode</key>
 			<string>Auto</string>
-			<key>KeySwap</key>
-			<false/>
-			<key>PointerSupport</key>
-			<false/>
-			<key>PointerSupportMode</key>
-			<string>ASUS</string>
-			<key>TimerResolution</key>
-			<integer>50000</integer>
 		</dict>
 		<key>Protocols</key>
 		<dict>
+			<key>AppleSmcIo</key>
+			<true/>
 			<key>ConsoleControl</key>
 			<true/>
 		</dict>
