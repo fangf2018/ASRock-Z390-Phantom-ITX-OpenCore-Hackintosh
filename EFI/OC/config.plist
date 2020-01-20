@@ -10,12 +10,6 @@
 				<key>Enabled</key>
 				<true/>
 				<key>Path</key>
-				<string>SSDT-APMC.aml</string>
-			</dict>
-			<dict>
-				<key>Enabled</key>
-				<true/>
-				<key>Path</key>
 				<string>SSDT-AWAC.aml</string>
 			</dict>
 			<dict>
@@ -28,13 +22,19 @@
 				<key>Enabled</key>
 				<true/>
 				<key>Path</key>
+				<string>SSDT-GPRW.aml</string>
+			</dict>
+			<dict>
+				<key>Enabled</key>
+				<true/>
+				<key>Path</key>
 				<string>SSDT-PLUG.aml</string>
 			</dict>
 			<dict>
 				<key>Enabled</key>
 				<true/>
 				<key>Path</key>
-				<string>SSDT-GPRW.aml</string>
+				<string>SSDT-PMC.aml</string>
 			</dict>
 		</array>
 		<key>Patch</key>
@@ -115,8 +115,6 @@
 		<key>Quirks</key>
 		<dict>
 			<key>AvoidRuntimeDefrag</key>
-			<true/>
-			<key>DisableVariableWrite</key>
 			<true/>
 			<key>EnableWriteUnprotector</key>
 			<true/>
@@ -216,11 +214,31 @@
 			</dict>
 			<dict>
 				<key>BundlePath</key>
+				<string>AirportBrcmFixup.kext</string>
+				<key>Enabled</key>
+				<true/>
+				<key>ExecutablePath</key>
+				<string>Contents/MacOS/AirportBrcmFixup</string>
+				<key>PlistPath</key>
+				<string>Contents/Info.plist</string>
+			</dict>
+			<dict>
+				<key>BundlePath</key>
 				<string>AppleALC.kext</string>
 				<key>Enabled</key>
 				<true/>
 				<key>ExecutablePath</key>
 				<string>Contents/MacOS/AppleALC</string>
+				<key>PlistPath</key>
+				<string>Contents/Info.plist</string>
+			</dict>
+			<dict>
+				<key>BundlePath</key>
+				<string>IntelMausiEthernet.kext</string>
+				<key>Enabled</key>
+				<true/>
+				<key>ExecutablePath</key>
+				<string>Contents/MacOS/IntelMausiEthernet</string>
 				<key>PlistPath</key>
 				<string>Contents/Info.plist</string>
 			</dict>
@@ -234,39 +252,11 @@
 			</dict>
 			<dict>
 				<key>BundlePath</key>
-				<string>IntelMausi.kext</string>
-				<key>Enabled</key>
-				<true/>
-				<key>ExecutablePath</key>
-				<string>Contents/MacOS/IntelMausi</string>
-				<key>PlistPath</key>
-				<string>Contents/Info.plist</string>
-			</dict>
-			<dict>
-				<key>BundlePath</key>
 				<string>IOElectrify.kext</string>
 				<key>Enabled</key>
 				<true/>
 				<key>ExecutablePath</key>
 				<string>Contents/MacOS/IOElectrify</string>
-				<key>PlistPath</key>
-				<string>Contents/Info.plist</string>
-			</dict>
-			<dict>
-				<key>BundlePath</key>
-				<string>CPUFriend.kext</string>
-				<key>Enabled</key>
-				<true/>
-				<key>ExecutablePath</key>
-				<string>Contents/MacOS/CPUFriend</string>
-				<key>PlistPath</key>
-				<string>Contents/Info.plist</string>
-			</dict>
-			<dict>
-				<key>BundlePath</key>
-				<string>CPUFriendDataProvider.kext</string>
-				<key>Enabled</key>
-				<true/>
 				<key>PlistPath</key>
 				<string>Contents/Info.plist</string>
 			</dict>
@@ -309,8 +299,6 @@
 		</array>
 		<key>Quirks</key>
 		<dict>
-			<key>PanicNoKextDump</key>
-			<true/>
 			<key>XhciPortLimit</key>
 			<true/>
 		</dict>
@@ -360,7 +348,7 @@
 			<key>7C436110-AB2A-4BBB-A880-FE41995C9F82</key>
 			<dict>
 				<key>boot-args</key>
-				<string>dart=0 alcid=1 darkwake=0 slide=1 agdpmod=pikera -v</string>
+				<string>brcmfx-country=#a alcid=1 darkwake=0 slide=1 agdpmod=pikera</string>
 				<key>csr-active-config</key>
 				<data>
 				ZwAAAA==
@@ -386,40 +374,6 @@
 				<string>boot-args</string>
 			</array>
 		</dict>
-		<key>LegacyEnable</key>
-		<true/>
-		<key>LegacyOverwrite</key>
-		<true/>
-		<key>LegacySchema</key>
-		<dict>
-			<key>7C436110-AB2A-4BBB-A880-FE41995C9F82</key>
-			<array>
-				<string>EFIBluetoothDelay</string>
-				<string>EFILoginHiDPI</string>
-				<string>LocationServicesEnabled</string>
-				<string>SystemAudioVolume</string>
-				<string>SystemAudioVolumeDB</string>
-				<string>bluetoothActiveControllerInfo</string>
-				<string>bluetoothInternalControllerInfo</string>
-				<string>efi-boot-device</string>
-				<string>efi-boot-device-data</string>
-				<string>flagstate</string>
-				<string>fmm-computer-name</string>
-				<string>fmm-mobileme-token-FMM</string>
-				<string>fmm-mobileme-token-FMM-BridgeHasAccount</string>
-				<string>prev-lang:kbd</string>
-				<string>security-mode</string>
-				<string>specialbootdevice</string>
-			</array>
-			<key>8BE4DF61-93CA-11D2-AA0D-00E098032B8C</key>
-			<array>
-				<string>Boot0080</string>
-				<string>Boot0081</string>
-				<string>Boot0082</string>
-				<string>BootNext</string>
-				<string>BootOrder</string>
-			</array>
-		</dict>
 	</dict>
 	<key>PlatformInfo</key>
 	<dict>
@@ -428,19 +382,21 @@
 		<key>Generic</key>
 		<dict>
 			<key>MLB</key>
-			<string>C02934130GULNV91H</string>
+			<string>C02905403QXLNV9JA</string>
 			<key>ROM</key>
 			<data>
-			Nz4zdrpc
+			DqwZRFxc
 			</data>
 			<key>SpoofVendor</key>
 			<true/>
+			<key>SupportsCsm</key>
+			<false/>
 			<key>SystemProductName</key>
 			<string>iMac19,1</string>
 			<key>SystemSerialNumber</key>
-			<string>C02Z8UZ1JV3Q</string>
+			<string>C02Y6FYEJV3Q</string>
 			<key>SystemUUID</key>
-			<string>DEE15209-73DA-4905-8BEB-C5EB8C76BA5C</string>
+			<string>D8C3F789-15E5-4869-B0F7-1CDE29445C5C</string>
 		</dict>
 		<key>UpdateDataHub</key>
 		<true/>
@@ -458,11 +414,8 @@
 		<key>Drivers</key>
 		<array>
 			<string>ApfsDriverLoader.efi</string>
-			<string>AppleUsbKbDxe.efi</string>
 			<string>FwRuntimeServices.efi</string>
 			<string>HFSPlus.efi</string>
-			<string>NvmExpressDxe.efi</string>
-			<string>XhciDxe.efi</string>
 		</array>
 		<key>Input</key>
 		<dict>
@@ -474,6 +427,10 @@
 			<true/>
 			<key>KeySupportMode</key>
 			<string>Auto</string>
+			<key>PointerSupportMode</key>
+			<string>ASUS</string>
+			<key>TimerResolution</key>
+			<integer>50000</integer>
 		</dict>
 		<key>Protocols</key>
 		<dict>
