@@ -8,7 +8,7 @@ Motherboard：ASRockz390 phantom gaming-itx/ac
 
 cpu：i7 9700k
 
-Graphics：~~AMD Sapphire rx480~~ AMD RX5500 itx
+Graphics： AMD RX5500 itx
 
 Wireless network card：BCM943602CS
 
@@ -16,12 +16,10 @@ Wireless network card：BCM943602CS
 
 * System stability：No system crashes，System has been update10.15.1 Beta2(19B77a)
 
-* Graphics：rx480 driver is normal，UHD630 working frequency 1.2Ghz
+* Graphics：RX5500 driver is normal，UHD630 working frequency 1.2Ghz
 * Sound card：Normal drive
 * wifi、Bluetooth、Handoff、Sidecar Normal use
 * Sleep &wake：work well
-
-
 * location：work well
 * nvram：work well
 
@@ -38,6 +36,11 @@ Wireless network card：BCM943602CS
 
 
 # Update log
+
+### 2020-01-20
+
+* Turn on native NVRAM
+* Update
 
 ### 2019-11-07
 
@@ -88,49 +91,10 @@ Wireless network card：BCM943602CS
 * Startup file config optimization settings [reference](https://insanelymacdiscord.github.io/Getting-Started-With-OpenCore/)
 
 * **Add IOElectrify.kext to repair device hot plug**，
-* 移除不必要启动文件
-
-### 2019-10-03
-~~* 增加一个1.6版本的bios 已更改为苹果启动logo 可直接刷入 参考[修改教程](https://www.bilibili.com/read/cv2788822/)~~
-
-# Optimization tutorial
-
-### Emulated NVRAM
-So this section is for those who don’t have native NVRAM, Hardware to have incompatible native NVRAM with macOS are the Z390-300 series chipsets:
-* B360
-* B365
-* H310
-* H370
-* Q370
-* Z390
+* Remove unnecessary startup files
 
 
-#### Making the nvram.plist
 
-Outlay’s to making a NVRAM.plist file, Requires the following:
-
-Change these settings within the config.plist:
-
-##### Booter Section
-
-* `DisableVariableWrite`: set to `YES` NVRAM Section
-* `LegacyEnable`: set to `YES`
-* `LegacySchema`: NVRAM variables set and injected into OpenCore and compares these variables present in nvram.plist **Security Section**
-* `ExposeSensitiveData`: set to `0x3` (Which allows all data exposure)
-
-##### And within your EFI:
-
-* FwRuntimeServices.efi (Needed for sleep, wake and shutdown and other services to work correctly (Goes in the EFI/OC/Drivers Folder)
-
-##### Now grab the ‘LogoutHook.command’ and place it somewhere safe like within your user directory:
-
-`/Users/(your username)/LogoutHook/LogoutHook.command`
-
-##### Open up terminal and run the following:
-
-`sudo defaults write com.apple.loginwindow LogoutHook /Users/(your username)/LogoutHook/LogoutHook.command`
-
-##### Now you have emulated NVRAM, Just to note that for macOS to support the -x flag and work correctly which is unavailable on 10.12 and below. nvram.mojave fixes this by injecting it instead of the system based one.
 
 ## BIOS Setting
 
