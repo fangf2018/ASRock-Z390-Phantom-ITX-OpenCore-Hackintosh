@@ -126,6 +126,9 @@
 		<dict>
 			<key>PciRoot(0x0)/Pci(0x1,0x0)/Pci(0x0,0x0)/Pci(0x0,0x0)/Pci(0x0,0x0)</key>
 			<dict>
+				<key>#PP_PhmSoftPowerPlayTable</key>
+				<data>
+				</data>
 				<key>ATY,DeviceName</key>
 				<string>5500</string>
 				<key>ATY,FamilyName</key>
@@ -204,21 +207,29 @@
 			</dict>
 			<dict>
 				<key>BundlePath</key>
-				<string>WhateverGreen.kext</string>
+				<string>CPUFriend.kext</string>
 				<key>Enabled</key>
 				<true/>
 				<key>ExecutablePath</key>
-				<string>Contents/MacOS/WhateverGreen</string>
+				<string>Contents/MacOS/CPUFriend</string>
 				<key>PlistPath</key>
 				<string>Contents/Info.plist</string>
 			</dict>
 			<dict>
 				<key>BundlePath</key>
-				<string>AirportBrcmFixup.kext</string>
+				<string>CPUFriendDataProvider.kext</string>
+				<key>Enabled</key>
+				<true/>
+				<key>PlistPath</key>
+				<string>Contents/Info.plist</string>
+			</dict>
+			<dict>
+				<key>BundlePath</key>
+				<string>WhateverGreen.kext</string>
 				<key>Enabled</key>
 				<true/>
 				<key>ExecutablePath</key>
-				<string>Contents/MacOS/AirportBrcmFixup</string>
+				<string>Contents/MacOS/WhateverGreen</string>
 				<key>PlistPath</key>
 				<string>Contents/Info.plist</string>
 			</dict>
@@ -296,6 +307,39 @@
 				<key>Skip</key>
 				<integer>0</integer>
 			</dict>
+			<dict>
+				<key>Base</key>
+				<string>__ZN8AppleRTC14updateChecksumEv</string>
+				<key>Comment</key>
+				<string>Disable RTC checksum update on poweroff</string>
+				<key>Count</key>
+				<integer>1</integer>
+				<key>Enabled</key>
+				<true/>
+				<key>Find</key>
+				<data>
+				</data>
+				<key>Identifier</key>
+				<string>com.apple.driver.AppleRTC</string>
+				<key>Limit</key>
+				<integer>0</integer>
+				<key>Mask</key>
+				<data>
+				</data>
+				<key>MaxKernel</key>
+				<string></string>
+				<key>MinKernel</key>
+				<string></string>
+				<key>Replace</key>
+				<data>
+				ww==
+				</data>
+				<key>ReplaceMask</key>
+				<data>
+				</data>
+				<key>Skip</key>
+				<integer>0</integer>
+			</dict>
 		</array>
 		<key>Quirks</key>
 		<dict>
@@ -307,6 +351,8 @@
 	<dict>
 		<key>Boot</key>
 		<dict>
+			<key>BuiltinTextRenderer</key>
+			<true/>
 			<key>HibernateMode</key>
 			<string>None</string>
 			<key>HideSelf</key>
@@ -324,8 +370,6 @@
 			<true/>
 			<key>AllowSetDefault</key>
 			<true/>
-			<key>ExposeSensitiveData</key>
-			<integer>3</integer>
 			<key>RequireSignature</key>
 			<false/>
 			<key>RequireVault</key>
@@ -338,42 +382,25 @@
 	<dict>
 		<key>Add</key>
 		<dict>
-			<key>4D1EDE05-38C7-4A6A-9CC6-4BCCA8B38C14</key>
-			<dict>
-				<key>UIScale</key>
-				<data>
-				AQ==
-				</data>
-			</dict>
 			<key>7C436110-AB2A-4BBB-A880-FE41995C9F82</key>
 			<dict>
 				<key>boot-args</key>
-				<string>brcmfx-country=#a alcid=1 darkwake=0 slide=1 agdpmod=pikera</string>
+				<string>-v alcid=1 agdpmod=pikera</string>
 				<key>csr-active-config</key>
 				<data>
-				ZwAAAA==
-				</data>
-				<key>nvda_drv</key>
-				<data>
-				MQ==
-				</data>
-				<key>prev-lang:kbd</key>
-				<data>
-				emgtSGFuczoyNTI=
+				5wMAAA==
 				</data>
 			</dict>
 		</dict>
 		<key>Block</key>
 		<dict>
-			<key>4D1EDE05-38C7-4A6A-9CC6-4BCCA8B38C14</key>
-			<array>
-				<string>UIScale</string>
-			</array>
 			<key>7C436110-AB2A-4BBB-A880-FE41995C9F82</key>
 			<array>
 				<string>boot-args</string>
 			</array>
 		</dict>
+		<key>WriteFlash</key>
+		<true/>
 	</dict>
 	<key>PlatformInfo</key>
 	<dict>
@@ -381,22 +408,22 @@
 		<true/>
 		<key>Generic</key>
 		<dict>
+			<key>AdviseWindows</key>
+			<false/>
 			<key>MLB</key>
-			<string>C02905403QXLNV9JA</string>
+			<string>C02931609GULNV91M</string>
 			<key>ROM</key>
 			<data>
-			DqwZRFxc
+			q/+dhm1v
 			</data>
 			<key>SpoofVendor</key>
 			<true/>
-			<key>SupportsCsm</key>
-			<false/>
 			<key>SystemProductName</key>
 			<string>iMac19,1</string>
 			<key>SystemSerialNumber</key>
-			<string>C02Y6FYEJV3Q</string>
+			<string>C02Z5CYNJV3Q</string>
 			<key>SystemUUID</key>
-			<string>D8C3F789-15E5-4869-B0F7-1CDE29445C5C</string>
+			<string>5D50DA80-15B2-4EC3-9A5E-81482D866D6F</string>
 		</dict>
 		<key>UpdateDataHub</key>
 		<true/>
@@ -427,10 +454,6 @@
 			<true/>
 			<key>KeySupportMode</key>
 			<string>Auto</string>
-			<key>PointerSupportMode</key>
-			<string>ASUS</string>
-			<key>TimerResolution</key>
-			<integer>50000</integer>
 		</dict>
 		<key>Protocols</key>
 		<dict>
