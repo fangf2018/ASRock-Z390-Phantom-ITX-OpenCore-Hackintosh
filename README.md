@@ -37,6 +37,12 @@ Wireless network card：BCM943602CS
 
 # Update log
 
+### 2019-01-20
+
+* Update OpenCore
+* Add ssdt-tbtonpch.aml to support tpye-c  hot plug
+![](http://github.fangf.cc/mweb/15813651269056.jpg)
+
 ### 2020-01-20
 
 * Turn on native NVRAM
