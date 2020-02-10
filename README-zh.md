@@ -44,6 +44,13 @@ cpu：i7 9700k
 
 ### 2019-01-20
 
+* 同步更新OpenCore
+* 添加SSDT-TbtOnPch.aml支持tpye-c接口热插拔
+![](http://github.fangf.cc/mweb/15813651269056.jpg)
+
+
+### 2019-01-20
+
 * 开启原生nvram支持
 * 驱动日常更新
 
