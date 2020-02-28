@@ -360,7 +360,7 @@
 			<key>PickerAudioAssist</key>
 			<false/>
 			<key>PickerMode</key>
-			<string>Builtin</string>
+			<string>External</string>
 			<key>PollAppleHotKeys</key>
 			<true/>
 			<key>ShowPicker</key>
@@ -429,19 +429,19 @@
 		<key>Generic</key>
 		<dict>
 			<key>MLB</key>
-			<string>C02916600GULNV911</string>
+			<string>C02033100CDLNV91F</string>
 			<key>ROM</key>
 			<data>
-			7pah2AgB
+			bgLlN1Ea
 			</data>
 			<key>SpoofVendor</key>
 			<true/>
 			<key>SystemProductName</key>
 			<string>iMac19,1</string>
 			<key>SystemSerialNumber</key>
-			<string>C02YL1Z9JV3Q</string>
+			<string>C02D7LYKJV3Q</string>
 			<key>SystemUUID</key>
-			<string>768C4A2B-BEB4-4413-BAEA-998967D80801</string>
+			<string>93893243-FF53-421F-B6B2-E036F537511A</string>
 		</dict>
 		<key>UpdateDataHub</key>
 		<true/>
