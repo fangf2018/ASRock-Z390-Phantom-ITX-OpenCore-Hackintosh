@@ -22,12 +22,6 @@
 				<key>Enabled</key>
 				<true/>
 				<key>Path</key>
-				<string>SSDT-GPRW.aml</string>
-			</dict>
-			<dict>
-				<key>Enabled</key>
-				<true/>
-				<key>Path</key>
 				<string>SSDT-PLUG.aml</string>
 			</dict>
 			<dict>
@@ -40,85 +34,7 @@
 				<key>Enabled</key>
 				<false/>
 				<key>Path</key>
-				<string>SSDT-SBUS-MCHC.aml</string>
-			</dict>
-			<dict>
-				<key>Enabled</key>
-				<false/>
-				<key>Path</key>
 				<string>SSDT-TbtOnPch.aml</string>
-			</dict>
-		</array>
-		<key>Patch</key>
-		<array>
-			<dict>
-				<key>Comment</key>
-				<string>GPRW to XPRW
-</string>
-				<key>Count</key>
-				<integer>1</integer>
-				<key>Enabled</key>
-				<true/>
-				<key>Find</key>
-				<data>
-				R1BSVwI=
-				</data>
-				<key>Limit</key>
-				<integer>0</integer>
-				<key>Mask</key>
-				<data>
-				</data>
-				<key>OemTableId</key>
-				<data>
-				</data>
-				<key>Replace</key>
-				<data>
-				WFBSVwI=
-				</data>
-				<key>ReplaceMask</key>
-				<data>
-				</data>
-				<key>Skip</key>
-				<integer>0</integer>
-				<key>TableLength</key>
-				<integer>0</integer>
-				<key>TableSignature</key>
-				<data>
-				</data>
-			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>Name6D-04 to 00</string>
-				<key>Count</key>
-				<integer>0</integer>
-				<key>Enabled</key>
-				<true/>
-				<key>Find</key>
-				<data>
-				Cm0KBA==
-				</data>
-				<key>Limit</key>
-				<integer>0</integer>
-				<key>Mask</key>
-				<data>
-				</data>
-				<key>OemTableId</key>
-				<data>
-				</data>
-				<key>Replace</key>
-				<data>
-				Cm0KAA==
-				</data>
-				<key>ReplaceMask</key>
-				<data>
-				</data>
-				<key>Skip</key>
-				<integer>0</integer>
-				<key>TableLength</key>
-				<integer>0</integer>
-				<key>TableSignature</key>
-				<data>
-				</data>
 			</dict>
 		</array>
 	</dict>
@@ -138,12 +54,22 @@
 		<dict>
 			<key>PciRoot(0x0)/Pci(0x1,0x0)/Pci(0x0,0x0)/Pci(0x0,0x0)/Pci(0x0,0x0)</key>
 			<dict>
-				<key>ATY,DeviceName</key>
+				<key>@0,name</key>
+				<string>ATY,Boa</string>
+				<key>@1,name</key>
+				<string>ATY,Boa</string>
+				<key>@2,name</key>
+				<string>ATY,Boa</string>
+				<key>ATY,DeviceName 2</key>
 				<string>5500X</string>
 				<key>ATY,FamilyName</key>
 				<string>Radeon Pro</string>
+				<key>device_type</key>
+				<string>ATY,BoaParent</string>
 				<key>model</key>
 				<string>Radeon Pro 5500X</string>
+				<key>name</key>
+				<string>ATY_GPU</string>
 			</dict>
 			<key>PciRoot(0x0)/Pci(0x1f,0x3)</key>
 			<dict>
@@ -261,6 +187,14 @@
 			</dict>
 			<dict>
 				<key>BundlePath</key>
+				<string>USBPortsALL.kext</string>
+				<key>Enabled</key>
+				<false/>
+				<key>PlistPath</key>
+				<string>Contents/Info.plist</string>
+			</dict>
+			<dict>
+				<key>BundlePath</key>
 				<string>IOElectrify.kext</string>
 				<key>Enabled</key>
 				<true/>
@@ -280,7 +214,7 @@
 				<key>Count</key>
 				<integer>1</integer>
 				<key>Enabled</key>
-				<true/>
+				<false/>
 				<key>Find</key>
 				<data>
 				</data>
@@ -313,7 +247,7 @@
 				<key>Count</key>
 				<integer>1</integer>
 				<key>Enabled</key>
-				<true/>
+				<false/>
 				<key>Find</key>
 				<data>
 				</data>
@@ -352,13 +286,11 @@
 			<key>HibernateMode</key>
 			<string>None</string>
 			<key>HideAuxiliary</key>
-			<false/>
+			<true/>
 			<key>HideSelf</key>
 			<true/>
 			<key>PickerAttributes</key>
 			<integer>0</integer>
-			<key>PickerAudioAssist</key>
-			<false/>
 			<key>PickerMode</key>
 			<string>External</string>
 			<key>PollAppleHotKeys</key>
@@ -399,8 +331,12 @@
 			</dict>
 			<key>7C436110-AB2A-4BBB-A880-FE41995C9F82</key>
 			<dict>
+				<key>SystemAudioVolume</key>
+				<data>
+				Rg==
+				</data>
 				<key>boot-args</key>
-				<string>-v darkwake=0 slide=1 agdpmod=pikera</string>
+				<string>darkwake=0 slide=1 agdpmod=pikera</string>
 				<key>csr-active-config</key>
 				<data>
 				5wMAAA==
@@ -429,19 +365,19 @@
 		<key>Generic</key>
 		<dict>
 			<key>MLB</key>
-			<string>C02033100CDLNV91F</string>
+			<string>C02953310J9LNV9A8</string>
 			<key>ROM</key>
 			<data>
-			bgLlN1Ea
+			Kg3+iaN7
 			</data>
 			<key>SpoofVendor</key>
 			<true/>
 			<key>SystemProductName</key>
 			<string>iMac19,1</string>
 			<key>SystemSerialNumber</key>
-			<string>C02D7LYKJV3Q</string>
+			<string>C02ZX9YKJV3Q</string>
 			<key>SystemUUID</key>
-			<string>93893243-FF53-421F-B6B2-E036F537511A</string>
+			<string>441693DB-69D6-4A81-B9EF-780DC489A37B</string>
 		</dict>
 		<key>UpdateDataHub</key>
 		<true/>
@@ -454,28 +390,14 @@
 	</dict>
 	<key>UEFI</key>
 	<dict>
-		<key>Audio</key>
-		<dict>
-			<key>AudioCodec</key>
-			<integer>0</integer>
-			<key>AudioDevice</key>
-			<string>PciRoot(0x0)/Pci(0x1f,0x3)</string>
-			<key>AudioOut</key>
-			<integer>0</integer>
-			<key>AudioSupport</key>
-			<false/>
-			<key>PlayChime</key>
-			<false/>
-		</dict>
 		<key>ConnectDrivers</key>
 		<true/>
 		<key>Drivers</key>
 		<array>
 			<string>ApfsDriverLoader.efi</string>
-			<string>AudioDxe.efi</string>
-			<string>FwRuntimeServices.efi</string>
 			<string>HFSPlus.efi</string>
-			<string>NdkBootPicker.efi</string>
+			<string>OpenCanopy.efi</string>
+			<string>OpenRuntime.efi</string>
 		</array>
 		<key>Input</key>
 		<dict>
@@ -503,8 +425,6 @@
 		</dict>
 		<key>Protocols</key>
 		<dict>
-			<key>AppleAudio</key>
-			<false/>
 			<key>AppleSmcIo</key>
 			<true/>
 		</dict>
