@@ -37,7 +37,7 @@ Wireless network card：BCM943602CS
 
 # Update log
 
-### 2019-01-20
+### 2020-01-20
 
 * Update OpenCore
 * Add ssdt-tbtonpch.aml to support tpye-c  hot plug
