@@ -16,11 +16,17 @@
 				<key>Enabled</key>
 				<true/>
 				<key>Path</key>
-				<string>SSDT-EC-USBX.aml</string>
+				<string>SSDT-DTPG.aml</string>
 			</dict>
 			<dict>
 				<key>Enabled</key>
 				<true/>
+				<key>Path</key>
+				<string>SSDT-EC-USBX.aml</string>
+			</dict>
+			<dict>
+				<key>Enabled</key>
+				<false/>
 				<key>Path</key>
 				<string>SSDT-GPRW.aml</string>
 			</dict>
@@ -38,7 +44,7 @@
 			</dict>
 			<dict>
 				<key>Enabled</key>
-				<false/>
+				<true/>
 				<key>Path</key>
 				<string>SSDT-TbtOnPch.aml</string>
 			</dict>
@@ -47,12 +53,26 @@
 		<array>
 			<dict>
 				<key>Comment</key>
+				<string>change _E2C to XE2C for TB hotplug</string>
+				<key>Enabled</key>
+				<true/>
+				<key>Find</key>
+				<data>
+				X0UyQw==
+				</data>
+				<key>Replace</key>
+				<data>
+				WEUyQw==
+				</data>
+			</dict>
+			<dict>
+				<key>Comment</key>
 				<string>GPRW to XPRW
 </string>
 				<key>Count</key>
 				<integer>1</integer>
 				<key>Enabled</key>
-				<true/>
+				<false/>
 				<key>Find</key>
 				<data>
 				R1BSVwI=
@@ -86,7 +106,7 @@
 				<key>Count</key>
 				<integer>0</integer>
 				<key>Enabled</key>
-				<true/>
+				<false/>
 				<key>Find</key>
 				<data>
 				Cm0KBA==
@@ -267,24 +287,6 @@
 				<key>PlistPath</key>
 				<string>Contents/Info.plist</string>
 			</dict>
-			<dict>
-				<key>BundlePath</key>
-				<string>USBPortsALL.kext</string>
-				<key>Enabled</key>
-				<false/>
-				<key>PlistPath</key>
-				<string>Contents/Info.plist</string>
-			</dict>
-			<dict>
-				<key>BundlePath</key>
-				<string>IOElectrify.kext</string>
-				<key>Enabled</key>
-				<true/>
-				<key>ExecutablePath</key>
-				<string>Contents/MacOS/IOElectrify</string>
-				<key>PlistPath</key>
-				<string>Contents/Info.plist</string>
-			</dict>
 		</array>
 		<key>Patch</key>
 		<array>
@@ -296,7 +298,7 @@
 				<key>Count</key>
 				<integer>1</integer>
 				<key>Enabled</key>
-				<true/>
+				<false/>
 				<key>Find</key>
 				<data>
 				</data>
@@ -353,7 +355,7 @@
 			<key>PollAppleHotKeys</key>
 			<true/>
 			<key>ShowPicker</key>
-			<false/>
+			<true/>
 			<key>TakeoffDelay</key>
 			<integer>0</integer>
 			<key>Timeout</key>
@@ -446,19 +448,19 @@
 			<key>AdviseWindows</key>
 			<false/>
 			<key>MLB</key>
-			<string>C02910609QXLNV98C</string>
+			<string>C02916600GULNV92H</string>
 			<key>ROM</key>
 			<data>
-			XDhWNCwM
+			7pah2AgB
 			</data>
 			<key>SpoofVendor</key>
 			<true/>
 			<key>SystemProductName</key>
 			<string>iMac19,1</string>
 			<key>SystemSerialNumber</key>
-			<string>C02YD5Z0JV3Q</string>
+			<string>C02Y1CZ9JV3Q</string>
 			<key>SystemUUID</key>
-			<string>1085C2A6-B97B0000-00000000-00000000</string>
+			<string>7085C2A6-B97B0001-00000000-00000000</string>
 		</dict>
 		<key>UpdateDataHub</key>
 		<true/>
