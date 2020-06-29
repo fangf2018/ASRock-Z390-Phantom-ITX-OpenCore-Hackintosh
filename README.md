@@ -12,6 +12,9 @@ Graphics： AMD RX5500 itx
 
 Wireless network card：BCM943602CS
 
+![](http://github.fangf.cc/mweb/15934410276957.jpg)
+
+
 ## Drive situation
 
 * System stability：No system crashes，System has been update10.15.1 Beta2(19B77a)
