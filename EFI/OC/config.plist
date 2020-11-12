@@ -702,7 +702,7 @@ GPRW to XPRW</string>
                     <key>SystemAudioVolume</key>
                     <data>Rg==</data>
                     <key>boot-args</key>
-                    <string>alcid=7 darkwake=0 agdpmod=pikera shikigva=80</string>
+                    <string>alcid=7 darkwake=0 agdpmod=pikera shikigva=80 igfxfw=2</string>
                     <key>csr-active-config</key>
                     <data>DnCwAA==</data>
                     <key>prev-lang:kbd</key>
