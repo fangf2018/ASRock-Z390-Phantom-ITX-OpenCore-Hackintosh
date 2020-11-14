@@ -27,14 +27,6 @@
                     <key>Enabled</key>
                     <true/>
                     <key>Path</key>
-                    <string>SSDT-GPRW.aml</string>
-                </dict>
-                <dict>
-                    <key>Comment</key>
-                    <string></string>
-                    <key>Enabled</key>
-                    <true/>
-                    <key>Path</key>
                     <string>SSDT-PLUG.aml</string>
                 </dict>
                 <dict>
@@ -45,7 +37,17 @@
                     <key>Path</key>
                     <string>SSDT-PMC.aml</string>
                 </dict>
+                <dict>
+                    <key>Comment</key>
+                    <string></string>
+                    <key>Enabled</key>
+                    <true/>
+                    <key>Path</key>
+                    <string>SSDT-GPRW.aml</string>
+                </dict>
             </array>
+            <key>Delete</key>
+            <array/>
             <key>Patch</key>
             <array>
                 <dict>
@@ -76,12 +78,9 @@
                 </dict>
                 <dict>
                     <key>Comment</key>
-                    <string>GPRW to XPRW
-GPRW to XPRWGPRW to XPRW
-GPRW to XPRW
-GPRW to XPRW</string>
+                    <string>GPRW to XPRW</string>
                     <key>Count</key>
-                    <integer>1</integer>
+                    <integer>0</integer>
                     <key>Enabled</key>
                     <true/>
                     <key>Find</key>
@@ -120,6 +119,8 @@ GPRW to XPRW</string>
         </dict>
         <key>Booter</key>
         <dict>
+            <key>MmioWhitelist</key>
+            <array/>
             <key>Quirks</key>
             <dict>
                 <key>AvoidRuntimeDefrag</key>
@@ -165,11 +166,13 @@ GPRW to XPRW</string>
                 <key>PciRoot(0x0)/Pci(0x1,0x0)/Pci(0x0,0x0)/Pci(0x0,0x0)/Pci(0x0,0x0)</key>
                 <dict>
                     <key>ATY,DeviceName</key>
-                    <string>5500</string>
+                    <string>W5500X</string>
                     <key>ATY,FamilyName</key>
-                    <string>Radeon RX</string>
+                    <string>Radeon Pro</string>
                     <key>model</key>
-                    <string>Radeon RX 5500</string>
+                    <string>Radeon Pro W5500X</string>
+                    <key>shikigva</key>
+                    <integer>80</integer>
                 </dict>
                 <key>PciRoot(0x0)/Pci(0x2,0x0)</key>
                 <dict>
@@ -183,6 +186,8 @@ GPRW to XPRW</string>
                     <data>AQAAAA==</data>
                     <key>framebuffer-stolenmem</key>
                     <data>AAAwAQ==</data>
+                    <key>igfxfw</key>
+                    <data>AgAAAA==</data>
                 </dict>
             </dict>
             <key>Delete</key>
@@ -337,6 +342,8 @@ GPRW to XPRW</string>
                     <string>Contents/Info.plist</string>
                 </dict>
             </array>
+            <key>Block</key>
+            <array/>
             <key>Emulate</key>
             <dict>
                 <key>Cpuid1Data</key>
@@ -350,6 +357,8 @@ GPRW to XPRW</string>
                 <key>MinKernel</key>
                 <string></string>
             </dict>
+            <key>Force</key>
+            <array/>
             <key>Patch</key>
             <array>
                 <dict>
@@ -404,6 +413,8 @@ GPRW to XPRW</string>
                 <key>ExtendBTFeatureFlags</key>
                 <false/>
                 <key>ExternalDiskIcons</key>
+                <false/>
+                <key>ForceSecureBootScheme</key>
                 <false/>
                 <key>IncreasePciBarSize</key>
                 <false/>
@@ -488,6 +499,8 @@ GPRW to XPRW</string>
                 <integer>0</integer>
                 <key>AuthRestart</key>
                 <false/>
+                <key>BlacklistAppleUpdate</key>
+                <false/>
                 <key>BootProtect</key>
                 <string>Bootstrap</string>
                 <key>DmgLoading</key>
@@ -524,6 +537,10 @@ GPRW to XPRW</string>
                     <string>BootKicker</string>
                     <key>Path</key>
                     <string>BootKicker.efi</string>
+                    <key>RealPath</key>
+                    <false/>
+                    <key>TextMode</key>
+                    <false/>
                 </dict>
                 <dict>
                     <key>Arguments</key>
@@ -538,6 +555,10 @@ GPRW to XPRW</string>
                     <string>ChipTune</string>
                     <key>Path</key>
                     <string>ChipTune.efi</string>
+                    <key>RealPath</key>
+                    <false/>
+                    <key>TextMode</key>
+                    <false/>
                 </dict>
                 <dict>
                     <key>Arguments</key>
@@ -552,6 +573,10 @@ GPRW to XPRW</string>
                     <string>CleanNvram</string>
                     <key>Path</key>
                     <string>CleanNvram.efi</string>
+                    <key>RealPath</key>
+                    <false/>
+                    <key>TextMode</key>
+                    <false/>
                 </dict>
                 <dict>
                     <key>Arguments</key>
@@ -566,6 +591,10 @@ GPRW to XPRW</string>
                     <string>GopStop</string>
                     <key>Path</key>
                     <string>GopStop.efi</string>
+                    <key>RealPath</key>
+                    <false/>
+                    <key>TextMode</key>
+                    <false/>
                 </dict>
                 <dict>
                     <key>Arguments</key>
@@ -580,6 +609,10 @@ GPRW to XPRW</string>
                     <string>HdaCodecDump</string>
                     <key>Path</key>
                     <string>HdaCodecDump.efi</string>
+                    <key>RealPath</key>
+                    <false/>
+                    <key>TextMode</key>
+                    <false/>
                 </dict>
                 <dict>
                     <key>Arguments</key>
@@ -594,6 +627,10 @@ GPRW to XPRW</string>
                     <string>KeyTester</string>
                     <key>Path</key>
                     <string>KeyTester.efi</string>
+                    <key>RealPath</key>
+                    <false/>
+                    <key>TextMode</key>
+                    <false/>
                 </dict>
                 <dict>
                     <key>Arguments</key>
@@ -608,6 +645,10 @@ GPRW to XPRW</string>
                     <string>MmapDump</string>
                     <key>Path</key>
                     <string>MmapDump.efi</string>
+                    <key>RealPath</key>
+                    <false/>
+                    <key>TextMode</key>
+                    <false/>
                 </dict>
                 <dict>
                     <key>Arguments</key>
@@ -622,6 +663,10 @@ GPRW to XPRW</string>
                     <string>OpenControl</string>
                     <key>Path</key>
                     <string>OpenControl.efi</string>
+                    <key>RealPath</key>
+                    <false/>
+                    <key>TextMode</key>
+                    <false/>
                 </dict>
                 <dict>
                     <key>Arguments</key>
@@ -636,6 +681,10 @@ GPRW to XPRW</string>
                     <string>OpenShell</string>
                     <key>Path</key>
                     <string>OpenShell.efi</string>
+                    <key>RealPath</key>
+                    <false/>
+                    <key>TextMode</key>
+                    <false/>
                 </dict>
                 <dict>
                     <key>Arguments</key>
@@ -650,6 +699,10 @@ GPRW to XPRW</string>
                     <string>ResetSystem</string>
                     <key>Path</key>
                     <string>ResetSystem.efi</string>
+                    <key>RealPath</key>
+                    <false/>
+                    <key>TextMode</key>
+                    <false/>
                 </dict>
                 <dict>
                     <key>Arguments</key>
@@ -664,6 +717,10 @@ GPRW to XPRW</string>
                     <string>RtcRw</string>
                     <key>Path</key>
                     <string>RtcRw.efi</string>
+                    <key>RealPath</key>
+                    <false/>
+                    <key>TextMode</key>
+                    <false/>
                 </dict>
                 <dict>
                     <key>Arguments</key>
@@ -678,6 +735,10 @@ GPRW to XPRW</string>
                     <string>VerifyMsrE2</string>
                     <key>Path</key>
                     <string>VerifyMsrE2.efi</string>
+                    <key>RealPath</key>
+                    <false/>
+                    <key>TextMode</key>
+                    <false/>
                 </dict>
             </array>
         </dict>
@@ -702,7 +763,7 @@ GPRW to XPRW</string>
                     <key>SystemAudioVolume</key>
                     <data>Rg==</data>
                     <key>boot-args</key>
-                    <string>alcid=7 darkwake=0 agdpmod=pikera shikigva=80 igfxfw=2</string>
+                    <string>alcid=7 darkwake=0 agdpmod=pikera</string>
                     <key>csr-active-config</key>
                     <data>DnCwAA==</data>
                     <key>prev-lang:kbd</key>
@@ -793,20 +854,20 @@ GPRW to XPRW</string>
                 <key>SystemProductName</key>
                 <string>iMac19,1</string>
                 <key>SystemSerialNumber</key>
-                <string>C02Y3BZHJV3Q</string>
+                <string>C02YN9YVJV3Q</string>
                 <key>SystemUUID</key>
-                <string>019CB379-24F8-41BE-948A-A6144D50FB99</string>
+                <string>2709F3AC-3EB0-4545-AFCA-91EBF8CB36E9</string>
             </dict>
             <key>Generic</key>
             <dict>
                 <key>AdviseWindows</key>
                 <false/>
                 <key>MLB</key>
-                <string>C02902207J9LNV9AD</string>
+                <string>C02918270CDLNV91M</string>
                 <key>ProcessorType</key>
                 <integer>0</integer>
                 <key>ROM</key>
-                <data></data>
+                <data>rgAAMgAAjgA=</data>
                 <key>SpoofVendor</key>
                 <true/>
                 <key>SystemMemoryStatus</key>
@@ -814,14 +875,16 @@ GPRW to XPRW</string>
                 <key>SystemProductName</key>
                 <string>iMac19,1</string>
                 <key>SystemSerialNumber</key>
-                <string>C02Y3BZHJV3Q</string>
+                <string>C02YN9YVJV3Q</string>
                 <key>SystemUUID</key>
-                <string>019CB379-24F8-41BE-948A-A6144D50FB99</string>
+                <string>2709F3AC-3EB0-4545-AFCA-91EBF8CB36E9</string>
             </dict>
             <key>Memory</key>
             <dict>
                 <key>DataWidth</key>
                 <integer>0</integer>
+                <key>Devices</key>
+                <array/>
                 <key>ErrorCorrection</key>
                 <integer>0</integer>
                 <key>FormFactor</key>
@@ -844,9 +907,11 @@ GPRW to XPRW</string>
                 <key>FirmwareFeaturesMask</key>
                 <data></data>
                 <key>MLB</key>
-                <string>C02902207J9LNV9AD</string>
+                <string>C02918270CDLNV91M</string>
                 <key>ROM</key>
                 <data></data>
+                <key>SystemUUID</key>
+                <string></string>
             </dict>
             <key>SMBIOS</key>
             <dict>
@@ -899,9 +964,9 @@ GPRW to XPRW</string>
                 <key>SystemSKUNumber</key>
                 <string></string>
                 <key>SystemSerialNumber</key>
-                <string>C02Y3BZHJV3Q</string>
+                <string>C02YN9YVJV3Q</string>
                 <key>SystemUUID</key>
-                <string>019CB379-24F8-41BE-948A-A6144D50FB99</string>
+                <string>2709F3AC-3EB0-4545-AFCA-91EBF8CB36E9</string>
                 <key>SystemVersion</key>
                 <string></string>
             </dict>
@@ -984,6 +1049,8 @@ GPRW to XPRW</string>
                 <key>ConsoleMode</key>
                 <string>Max</string>
                 <key>DirectGopRendering</key>
+                <false/>
+                <key>ForceResolution</key>
                 <false/>
                 <key>IgnoreTextInGraphics</key>
                 <false/>
