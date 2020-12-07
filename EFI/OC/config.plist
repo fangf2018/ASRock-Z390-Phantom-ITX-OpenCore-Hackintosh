@@ -11,22 +11,6 @@
                     <key>Enabled</key>
                     <true/>
                     <key>Path</key>
-                    <string>SSDT-PLUG.aml</string>
-                </dict>
-                <dict>
-                    <key>Comment</key>
-                    <string></string>
-                    <key>Enabled</key>
-                    <true/>
-                    <key>Path</key>
-                    <string>SSDT-EC.aml</string>
-                </dict>
-                <dict>
-                    <key>Comment</key>
-                    <string></string>
-                    <key>Enabled</key>
-                    <true/>
-                    <key>Path</key>
                     <string>SSDT-AWAC.aml</string>
                 </dict>
                 <dict>
@@ -43,7 +27,39 @@
                     <key>Enabled</key>
                     <true/>
                     <key>Path</key>
+                    <string>SSDT-PLUG.aml</string>
+                </dict>
+                <dict>
+                    <key>Comment</key>
+                    <string></string>
+                    <key>Enabled</key>
+                    <true/>
+                    <key>Path</key>
                     <string>SSDT-GPRW.aml</string>
+                </dict>
+                <dict>
+                    <key>Comment</key>
+                    <string></string>
+                    <key>Enabled</key>
+                    <true/>
+                    <key>Path</key>
+                    <string>SSDT-EC-USBX.aml</string>
+                </dict>
+                <dict>
+                    <key>Comment</key>
+                    <string></string>
+                    <key>Enabled</key>
+                    <false/>
+                    <key>Path</key>
+                    <string>SSDT-TbtOnPch_PINI.aml</string>
+                </dict>
+                <dict>
+                    <key>Comment</key>
+                    <string></string>
+                    <key>Enabled</key>
+                    <false/>
+                    <key>Path</key>
+                    <string>SSDT-DTPG.aml</string>
                 </dict>
             </array>
             <key>Delete</key>
@@ -54,7 +70,7 @@
                     <key>Comment</key>
                     <string>Name6D-04 to 00</string>
                     <key>Count</key>
-                    <integer>0</integer>
+                    <integer>1</integer>
                     <key>Enabled</key>
                     <true/>
                     <key>Find</key>
@@ -102,6 +118,32 @@
                     <key>TableSignature</key>
                     <data></data>
                 </dict>
+                <dict>
+                    <key>Comment</key>
+                    <string>change _E2C to XE2C for TB hotplug</string>
+                    <key>Count</key>
+                    <integer>0</integer>
+                    <key>Enabled</key>
+                    <false/>
+                    <key>Find</key>
+                    <data>X0UyQw==</data>
+                    <key>Limit</key>
+                    <integer>0</integer>
+                    <key>Mask</key>
+                    <data></data>
+                    <key>OemTableId</key>
+                    <data></data>
+                    <key>Replace</key>
+                    <data>WEUyQw==</data>
+                    <key>ReplaceMask</key>
+                    <data></data>
+                    <key>Skip</key>
+                    <integer>0</integer>
+                    <key>TableLength</key>
+                    <integer>0</integer>
+                    <key>TableSignature</key>
+                    <data></data>
+                </dict>
             </array>
             <key>Quirks</key>
             <dict>
@@ -120,6 +162,8 @@
         <key>Booter</key>
         <dict>
             <key>MmioWhitelist</key>
+            <array/>
+            <key>Patch</key>
             <array/>
             <key>Quirks</key>
             <dict>
@@ -207,7 +251,7 @@
                 <key>PciRoot(0x0)/Pci(0x1F,0x6)</key>
                 <dict>
                     <key>AAPL,slot-name</key>
-                    <string>Internal@0,31,6</string>
+                    <string>built-in</string>
                     <key>device_type</key>
                     <string>Ethernet controller</string>
                     <key>model</key>
@@ -384,6 +428,24 @@
                     <key>Arch</key>
                     <string>x86_64</string>
                     <key>BundlePath</key>
+                    <string>NVMeFix.kext</string>
+                    <key>Comment</key>
+                    <string></string>
+                    <key>Enabled</key>
+                    <false/>
+                    <key>ExecutablePath</key>
+                    <string>Contents/MacOS/NVMeFix</string>
+                    <key>MaxKernel</key>
+                    <string></string>
+                    <key>MinKernel</key>
+                    <string></string>
+                    <key>PlistPath</key>
+                    <string>Contents/Info.plist</string>
+                </dict>
+                <dict>
+                    <key>Arch</key>
+                    <string>x86_64</string>
+                    <key>BundlePath</key>
                     <string>USBPorts.kext</string>
                     <key>Comment</key>
                     <string>XHC ports configuration</string>
@@ -511,7 +573,7 @@
                 <key>HideAuxiliary</key>
                 <true/>
                 <key>PickerAttributes</key>
-                <integer>1</integer>
+                <integer>15</integer>
                 <key>PickerAudioAssist</key>
                 <false/>
                 <key>PickerMode</key>
@@ -640,7 +702,7 @@
                     <key>SystemAudioVolume</key>
                     <data>Rg==</data>
                     <key>boot-args</key>
-                    <string>alcid=7 darkwake=0 agdpmod=pikera rtcfx_exclude=A0,A3-A4,A6,AB,B8,BA-BB,BE,E0,E6,EA,EC,EF,F1-F2,F4,F6,FB-FC </string>
+                    <string>alcid=7 darkwake=0 agdpmod=pikera</string>
                     <key>csr-active-config</key>
                     <data>5wsAAA==</data>
                     <key>prev-lang:kbd</key>
@@ -733,16 +795,16 @@
                 <key>SystemProductName</key>
                 <string>iMac19,1</string>
                 <key>SystemSerialNumber</key>
-                <string>C02YKEZYJV3Q</string>
+                <string>C02Z9ZYPJV3Q</string>
                 <key>SystemUUID</key>
-                <string>2476277E-DEE9-47D6-91B3-4D7C5BCA7F09</string>
+                <string>6250B43F-AF9D-48F3-9D20-97D1D79C60F6</string>
             </dict>
             <key>Generic</key>
             <dict>
                 <key>AdviseWindows</key>
                 <false/>
                 <key>MLB</key>
-                <string>C02915500GULNV91M</string>
+                <string>C02935270GULNV9A8</string>
                 <key>ProcessorType</key>
                 <integer>0</integer>
                 <key>ROM</key>
@@ -754,9 +816,9 @@
                 <key>SystemProductName</key>
                 <string>iMac19,1</string>
                 <key>SystemSerialNumber</key>
-                <string>C02YKEZYJV3Q</string>
+                <string>C02Z9ZYPJV3Q</string>
                 <key>SystemUUID</key>
-                <string>2476277E-DEE9-47D6-91B3-4D7C5BCA7F09</string>
+                <string>6250B43F-AF9D-48F3-9D20-97D1D79C60F6</string>
             </dict>
             <key>Memory</key>
             <dict>
@@ -786,7 +848,7 @@
                 <key>FirmwareFeaturesMask</key>
                 <data></data>
                 <key>MLB</key>
-                <string>C02915500GULNV91M</string>
+                <string>C02935270GULNV9A8</string>
                 <key>ROM</key>
                 <data></data>
                 <key>SystemUUID</key>
@@ -843,9 +905,9 @@
                 <key>SystemSKUNumber</key>
                 <string></string>
                 <key>SystemSerialNumber</key>
-                <string>C02YKEZYJV3Q</string>
+                <string>C02Z9ZYPJV3Q</string>
                 <key>SystemUUID</key>
-                <string>2476277E-DEE9-47D6-91B3-4D7C5BCA7F09</string>
+                <string>6250B43F-AF9D-48F3-9D20-97D1D79C60F6</string>
                 <key>SystemVersion</key>
                 <string></string>
             </dict>
@@ -880,15 +942,15 @@
                 <key>AudioCodec</key>
                 <integer>0</integer>
                 <key>AudioDevice</key>
-                <string>PciRoot(0x0)/Pci(0x1b,0x0)</string>
+                <string></string>
                 <key>AudioOut</key>
                 <integer>0</integer>
                 <key>AudioSupport</key>
                 <false/>
                 <key>MinimumVolume</key>
-                <integer>20</integer>
+                <integer>0</integer>
                 <key>PlayChime</key>
-                <false/>
+                <string></string>
                 <key>VolumeAmplifier</key>
                 <integer>0</integer>
             </dict>
