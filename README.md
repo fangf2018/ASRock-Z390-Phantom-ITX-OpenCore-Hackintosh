@@ -42,10 +42,6 @@ Wireless network card：BCM943602CS
 # Update log
 
 
-### 2020-01-20
-
-
-
 ### 2020-05-18
 
 * TB3 hotplug [Help](https://fangf.cc/2020/05/19/TB3/)
