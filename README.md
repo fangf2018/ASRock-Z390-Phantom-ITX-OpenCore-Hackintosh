@@ -12,6 +12,9 @@ Graphics： AMD RX5500 itx
 
 Wireless network card：BCM943602CS
 
+![](http://github.fangf.cc/mweb/15934410276957.jpg)
+
+
 ## Drive situation
 
 * System stability：No system crashes，System has been update10.15.1 Beta2(19B77a)
@@ -29,7 +32,8 @@ Wireless network card：BCM943602CS
 
 ![QQ20191013-112335](http://github.fangf.cc/mweb/QQ20191013-112335.png)
 
-* type-c：Plug in the device before booting, hotplug
+* ~~type-c：Plug in the device before booting, hotplug~~
+* TB3 ：hot-plug
 
 
 
@@ -37,11 +41,16 @@ Wireless network card：BCM943602CS
 
 # Update log
 
-### 2019-01-20
 
-* Update OpenCore
-* Add ssdt-tbtonpch.aml to support tpye-c  hot plug
-![](http://github.fangf.cc/mweb/15813651269056.jpg)
+### 2020-01-20
+
+
+
+### 2020-05-18
+
+* TB3 hotplug [Help](https://fangf.cc/2020/05/19/TB3/)
+
+![](http://github.fangf.cc/mweb/15898151330755.jpg)
 
 ### 2020-01-20
 
