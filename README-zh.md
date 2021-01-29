@@ -49,16 +49,12 @@ cpu：i7 9700k
 ### 2020-05-18
 
 * 雷电3热插拔 [教程](https://fangf.cc/2020/05/19/TB3/)
-
-![](http://github.fangf.cc/mweb/15898151330755.jpg)
-### 2019-01-20
-
 * 同步更新OpenCore
 * 添加SSDT-TbtOnPch.aml支持tpye-c接口热插拔
 ![](http://github.fangf.cc/mweb/15813651269056.jpg)
+![](http://github.fangf.cc/mweb/15898151330755.jpg)
 
-
-### 2019-01-20
+### 2020-01-20
 
 * 开启原生nvram支持
 * 驱动日常更新
